@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>funciones</title>
+    <title>Areas</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -15,24 +15,47 @@
             /*grid-template-columns: 200px 200px 200px;
             grid-template-rows: 300px 300px;*/
             /*grid-template: 300px 100px 100px/ repeat(4, 1fr);*/
-            grid-template: 300px 100px 100px/ repeat(4, minmax(200px, 1fr));
+            grid-template: 100px 1fr 150px/ 200px 1fr;
             /*grid-column-gap: 30px;
             grid-row-gap: 50px;*/
             grid-gap: 10px;
+            height: 100vh;
+            grid-template-areas: "header header" "left contenido" "footer footer";
         }
         
         .item {
             background: blue;
             padding: 10px;
-            border: 1px solid red;
+            border: 1px solid black;
+            border-radius: 10px;
         }
         
         .item:nth-of-type(4) {
-            background: chartreuse;
-            overflow: auto;
+            /* background: chartreuse;
+            overflow: auto;*/
             /*display: subgrid;*/
             display: grid;
             grid-template: 300px 100px 100px/ 50% 200px 100px;
+        }
+        
+        .header {
+            grid-area: header;
+            background-color: rgb(248, 7, 248);
+        }
+        
+        .left {
+            grid-area: left;
+            background-color: rgb(167, 248, 4);
+        }
+        
+        .contenido {
+            grid-area: contenido;
+            background-color: rgb(45, 0, 248);
+        }
+        
+        .footer {
+            grid-area: footer;
+            background-color: red;
         }
     </style>
 
@@ -40,26 +63,11 @@
 
 <body>
     <section class="container">
-        <div class="item">contenido #1</div>
-        <div class="item">contenido #2</div>
-        <div class="item">contenido #3</div>
-        <div class="item">
-            <div class="item">sub-contenido #1</div>
-            <div class="item">sub-contenido #2</div>
-            <div class="item">sub-contenido #3</div>
-            <div class="item">sub-contenido #4</div>
-            <div class="item">sub-contenido #4</div>
+        <div class="item header">header</div>
+        <div class="item left">left</div>
+        <div class="item contenido">contenido</div>
+        <div class="item footer"> footer </div>
 
-
-        </div>
-        <div class="item">contenido #5</div>
-        <div class="item">contenido #6</div>
-        <div class="item">contenido #7</div>
-        <div class="item">contenido #8</div>
-        <div class="item">contenido #9</div>
-        <div class="item">contenido #10</div>
-        <div class="item">contenido #11</div>
-        <div class="item">contenido #12</div>
     </section>
 
 
