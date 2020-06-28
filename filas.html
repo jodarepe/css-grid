@@ -12,8 +12,8 @@
         
         .container {
             display: grid;
-            grid-template-columns: repeat(7, 1fr);
-            grid-template-rows: repeat(5, 200px);
+            grid-template-columns: [inicio] 1fr [linea2]1fr [linea3] 1fr [destacado]1fr [linea5] 1fr [destacado2] 1fr [linea7] 1fr [linea8] 1fr [linea9] 1fr [final];
+            grid-template-rows: [inicio] 200px [inicio2] 200px [final];
             grid-gap: 5px;
             height: 100vh;
         }
@@ -29,22 +29,24 @@
             overflow: auto;
             grid-column-start: 1;
             grid-column-end: 3; */
-            grid-column: 1 / span 3;
-            grid-row: 1 / span 2;
+            /* grid-column: 1 / span 3; */
+            /* grid-row: 1 / span 2; */
+            grid-column: inicio / final;
         }
         
         .item:nth-of-type(2) {
             /* grid-column: 1 / span 2; */
-            grid-column: 4 / span 2;
-            grid-row: 1 / span 2;
+            /* grid-column: 4 / span 2;
+            grid-row: 1 / span 2; */
+            grid-column: inicio / destacado;
         }
         
         .item:nth-of-type(3) {
             /* grid-column: 1 / span 2; */
-            grid-column: 6 / span 2;
+            grid-column: destacado / span destacado2;
         }
         
-        .item:nth-of-type(7) {
+        .item:nth-of-type(4) {
             /* grid-column: 2 / 4; */
         }
     </style>
@@ -58,6 +60,9 @@
         <div class="item">item #3</div>
         <div class="item">item #4</div>
         <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #7</div>
+
 
     </section>
 
