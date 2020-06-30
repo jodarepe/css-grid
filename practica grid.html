@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        grid-template-rows: 200px 200px 200px 200px;
+        grid-template-areas: "header""header" "letf contenido" "footer""footer";
+    }
+    
+    .item {
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        /* padding: 50px; */
+        border: 2px solid red;
+    }
+    
+    .header {
+        grid-area: header;
+    }
+</style>
+
+<body>
+    <section class="container">
+        <div class="item herader">container#1</div>
+        <div class="item header">container#2</div>
+        <div class="item letf">container#3</div>
+        <div class="item contenido">container#4</div>
+        <div class="item footer">container#5</div>
+        <div class="item footer">container#6</div>
+
+
+
+
+    </section>
+</body>
+
+</html>
